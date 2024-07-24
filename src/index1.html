@@ -1,0 +1,82 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signupp Website</title>
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <header class=" fixed w-full bg-gray-800 p-4">
+        <div class="flex items-center justify-between">
+          <div class="text-white">
+            <h1 class="text-2xl font-bold">BRAINIAAC</h1>
+          </div>
+        </div>
+      </header>
+      <div class="w-full min-h-screen flex items-center justify-center">
+    <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold  text-center">Welcome</h2>
+        <h4 class="italic mb-8 text-center">Get ready to charge up your brain</h4>
+
+        <div id="loginForm" class="mb-4 ">
+            <h3 class="text-lg font-semibold mb-4">Login</h3>
+            <form id="loginForm" class="test">
+                <div class="mb-4">
+                    <label for="loginUsername" class="block text-sm font-medium text-gray-700">Username</label>
+                    <input type="text" id="loginUsername" name="loginUsername" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="loginPassword" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="loginPassword" name="loginPassword" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+                </div>
+                <button type="submit" class=" py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Login
+                </button>
+                <hr class="my-8">
+                First time around here? <button onclick="loginfrm()" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Signup</button>
+            </form>
+        </div>
+
+        
+
+        <div id="signupForm" class="hidden">
+            <h3 class="text-lg font-semibold mb-4">Signup</h3>
+            <form id="signupForm">
+                <div class="mb-4">
+                    <label for="signupUsername" class="block text-sm font-medium text-gray-700">Username</label>
+                    <input type="text" id="signupUsername" name="signupUsername" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="signupEmail" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="signupEmail" name="signupEmail" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="institution" class="block text-sm font-medium text-gray-700">Institution</label>
+                    <input type="text" id="institute" name="institution" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="signupPassword" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="signupPassword" name="signupPassword" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+                </div>
+                <div class="mb-4">
+                    <label for="signupPassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                    <input type="password" id="signupPassword" name="signupPassword" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
+                </div>
+                <button type="submit" class="py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                    Signup
+                </button>
+                <hr class="my-8">
+                Have an Account? <button onclick="loginfrm()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+   
+</body>
+
+</html>
