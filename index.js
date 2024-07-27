@@ -16,28 +16,6 @@ app.use(express.json());
 app.use(cors());
 
 
-const pool = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    waitForConnections: true,
-    connectionLimit: 10,
-    queueLimit: 0
-});
-
-async function query(sql, values = []) {
-    const connection = await pool.getConnection();
-    try {
-        const [rows] = await connection.query(sql, values);
-        return rows;
-    } catch (error) {
-        throw error;
-    } finally {
-        connection.release();
-    }
-}
-
 
 app.use(express.static('src'))
 
@@ -45,10 +23,30 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/src/stuff.html'));
 });
 
+app.get('/projects', (req, res) => {
+    res.sendFile(path.join(__dirname + '/src/projects.html'));
+});
+
+app.get('/getinvolved', (req, res) => {
+    res.sendFile(path.join(__dirname + '/src/getinvolved.html'));
+});
 
 app.get('/home', (req, res) => {
     res.sendFile(path.join(__dirname + '/src/home.html'));
 });
+app.get('/home1', (req, res) => {
+    res.sendFile(path.join(__dirname + '/src/home1.html'));
+});
+
+
+
+
+
+
+
+
+
+
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname + '/src/stuff.html'));
 });

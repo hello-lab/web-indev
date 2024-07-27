@@ -10,23 +10,27 @@
 <body class="bg-gray-100 h-full" onload="module('home')">
 
     <!-- Navigation -->
-    <nav class="bg-white sticky shadow-lg">
+    <nav class="bg-white sticky shadow-lg" style="
+    z-index: 3;
+    box-shadow: 0px 4px 20px 1px black;
+">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-bold">Nature's Custodian </div>
+                <div class="text-2xl font-bold">Harvest Hope Initiatives </div>
                 <div class="hidden md:flex space-x-4">
-                    <a href="#" class="text-gray-800 hover:text-blue-500">Home</a>
-                    <a href="#" class="text-gray-800 hover:text-blue-500">About</a>
-                    <a href="#" class="text-gray-800 hover:text-blue-500">Services</a>
-                    <a href="#" class="text-gray-800 hover:text-blue-500">Contact</a>
+                    <button onclick="location.href='/home1'" class="text-gray-800 hover:text-blue-500">Home</button>
+                    <button onclick="module('projects')" class="text-gray-800 hover:text-blue-500">Projects</button>
+                    <button href="#" class="text-gray-800 hover:text-blue-500">Resources</button>
+                    <button onclick="module('getinvolved')" class="text-gray-800 hover:text-blue-500">Get Involved</button>
                 </div>
-                <div class="md:hidden">
-                    <button class="text-gray-800 focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
+               
+            </div>
+            <hr class="md:hidden">
+            <div class=" flex justify-content md:hidden space-x-4">
+                <a href="/home1" class="text-gray-800 hover:text-blue-500">Home</a>
+                <a href="projects" class="text-gray-800 hover:text-blue-500">Projects</a>
+                <a href="https://www.youtube.com/watch?v=QvkDDA62-tw&list=PLRvLw7B_KNvGvEAerjuHmn5DcFGzQ-3Zh" class="text-gray-800 hover:text-blue-500">Resources</a>
+                <a href="#" class="text-gray-800 hover:text-blue-500">Get Involved</a>
             </div>
         </div>
     </nav>
@@ -36,7 +40,7 @@
     </div>
     <footer id="footer" class="bg-white py-8 w-full  bottom-0">
         <div class=" mx-auto px-4  text-center">
-            <p class="text-gray-600">&copy; 2024 MyWebsite. All rights reserved.</p>
+            <p class="text-gray-600">&copy; MADE WITH LOVE BY DPSRPK.</p>
         </div>
     </footer>
 </body>
